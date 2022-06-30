@@ -1,8 +1,9 @@
-const removeFromArray = function (array, num) {
-    for (let arr of array) {
-
+const removeFromArray = function (array, ...arg) {
+    let filtered_array = array;
+    for (const ar of arg) {
+        filtered_array = filtered_array.filter(item => item !== ar)
     }
-    return array
+    return filtered_array
 };
 
 // Do not edit below this line
